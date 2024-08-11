@@ -37,7 +37,7 @@
       app.onEvent("mainButtonClicked", ()=>{
         const userId = app.initDataUnsafe.user.id;
         //app.CloudStorage.setItem(userId, "Some data here", (error, status)=>alert(status))
-        app.CloudStorage.getItems(userId, (error, data)=>app.showAlert(data))
+        app.CloudStorage.getItems(userId, (error, data)=>app.showAlert(JSON.stringify(data)))
       }) 
 
     </script>
