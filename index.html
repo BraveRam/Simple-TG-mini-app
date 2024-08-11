@@ -26,7 +26,7 @@
       
       app.ready();
       app.expand();
-      alert("")
+      alert("hi")
       try{
         app.MainButton.text = "Click here";
         app.MainButton.show()
@@ -36,8 +36,8 @@
       
       app.onEvent("mainButtonClicked", ()=>{
         const userId = app.initDataUnsafe.user.id;
-        //app.CloudStorage.setItem(userId, "Some data here", (error, status)=>alert(status))
-        app.CloudStorage.removeItem(userId, (error, data)=>app.showAlert(data))
+        app.CloudStorage.setItem(userId, [{balance: 5, startedAt: "10/5/2020"}], (error, status)=>alert(status))
+        app.CloudStorage.getItem(userId, (error, data)=>app.showAlert(data))
       }) 
 
     </script>
