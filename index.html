@@ -38,9 +38,7 @@
         const userId = app.initDataUnsafe.user.id;
         //app.CloudStorage.setItem(userId, [{balance: 5, startedAt: "10/5/2020"}], (error, status)=>alert(status))
         app.CloudStorage.getItem(userId, (error, data)=>{
-            let sth = [];
-            data.forEach(ech=>sth.push(ech))
-            alert(sth)
+            alert(data)
         })
       }) 
 
