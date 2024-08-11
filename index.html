@@ -36,10 +36,11 @@
       
       app.onEvent("mainButtonClicked", ()=>{
         const userId = app.initDataUnsafe.user.id;
+        app.requestWriteAccess()
         //app.CloudStorage.setItem(userId, [{balance: 5, startedAt: "10/5/2020"}], (error, status)=>alert(status))
-        app.CloudStorage.getItem(userId, (error, data)=>{
+        /*app.CloudStorage.getItem(userId, (error, data)=>{
             alert(data)
-        })
+        })*/
       }) 
 
     </script>
