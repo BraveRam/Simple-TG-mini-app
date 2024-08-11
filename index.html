@@ -28,7 +28,7 @@
       app.expand();
       
       try{
-        app.MainButton.text = "Menu";
+        app.MainButton.text = "Click here";
         app.MainButton.show()
       } catch(e){
         alert(e)
@@ -37,7 +37,7 @@
       app.onEvent("mainButtonClicked", ()=>{
         const userId = app.initDataUnsafe.user.id;
         //app.CloudStorage.setItem(userId, "Some data here", (error, status)=>alert(status))
-        alert(app.CloudStorage.getItem(userId, (error, data)=>alert(data)))
+        app.CloudStorage.getItem(userId, (error, data)=>app.showAlert(data))
       }) 
 
     </script>
